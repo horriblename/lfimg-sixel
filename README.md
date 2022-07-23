@@ -1,4 +1,4 @@
-# Image preview support for lf (list files) using Überzug
+# Image preview support for lf-sixel using chafa and sixels
 
 ![image](https://raw.githubusercontent.com/cirala/lfimg/master/screenshot.png)
 
@@ -9,7 +9,7 @@ When a SSH-connection has been established, [chafa](https://github.com/hpjansson
 
 ## Prerequisites
 
-Besides lf and Überzug you will need to install the following packages:
+Besides lf-sixel and chafa you will need to install the following packages:
 
 * ffmpegthumbnailer
 * ImageMagick
@@ -17,7 +17,6 @@ Besides lf and Überzug you will need to install the following packages:
 * epub-thumbnailer
 * wkhtmltopdf
 * bat (optional - color highlight for text files)
-* chafa (optional - for image preview over SSH or inside Wayland session)
 * unzip (optional - for .zip and .jar files)
 * 7z (optional - for .7z files)
 * unrar (optional - for .rar files)
@@ -39,12 +38,11 @@ make install
 
 To install this to your system, or you can do it manually by following the guide below:
 
-1. Extract the following files: **cleaner**, **preview** to **~/.config/lf/**.
+1. Extract the following files: **preview** to **~/.config/lf/**.
 2. Extract **lfrun** to a directory that is in your $PATH variable (such as /usr/bin).
 3. Edit your **~/.config/lf/lfrc** file and add the following lines:
 ```
 set previewer ~/.config/lf/preview
-set cleaner ~/.config/lf/cleaner
 ```
 4. In order to launch lf with image preview support from now on, you will need to use the supplied **lfrun** script.
 
