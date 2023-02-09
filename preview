@@ -1,7 +1,8 @@
 #!/bin/sh
 
 image() {
-   chafa "$1" -f sixel -s "$(($2-2))x$3" | sed 's/#/\n#/g'
+	geometry="$(($2-2))x$3"
+	chafa "$1" -f sixel -s "$geometry" --animate false | fold -w 65535
 }
 
 batorcat() {
