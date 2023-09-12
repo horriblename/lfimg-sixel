@@ -9,7 +9,6 @@ install:
 	@if [ -z "$(shell sed -n '/set previewer/p' ~/.config/lf/lfrc)" ]; then\
 		sed -i '1 i\set previewer ~/.config/lf/preview' ~/.config/lf/lfrc ;\
 	fi
-	fi
 	@if [ -z "$(shell sed -n '/set ratios/p' ~/.config/lf/lfrc)" ]; then\
 		sed -i '1 i\set ratios 1:2:3' ~/.config/lf/lfrc ;\
 	fi
